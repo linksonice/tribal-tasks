@@ -1,6 +1,6 @@
-# task 2
+This README covers tasks 2 and 3, the CloudFormation task, and the ECR repo and local build tasks respectively. 
 
-This README covers task 2, the CloudFormation task. 
+# task 2
 
 The basic method is this:
 
