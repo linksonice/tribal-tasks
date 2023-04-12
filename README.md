@@ -53,4 +53,5 @@ andrei@area66:~/devops/cloudformation/tribal-tasks$ curl localhost:5000
 
 The OTHER end result will of course be a private repo in ECR by the name of python-api, with an image tag either tribal or latest depending on the tag you chose. 
 
-The pre-requisites are of course a local, VIABLE AWS-CLI config/creds set in ~/.aws.
+The pre-requisites are of course a local, VIABLE AWS-CLI config/creds set in ~/.aws, and a viable, recent aws-cli package on your OS.
+ 
