@@ -30,7 +30,7 @@ As long as you only have the above stack active, run the command:
 
 aws cloudformation describe-stacks | grep OutputValue | awk '{ print $2 }' | awk -F"\"" '{ print $2":5000"}' | xargs curl
 
-or just find the output IP, browse it on port 5000.
+or just find the output IP based on aws cloudformation describe-stacks --stack-name tribal-task2, and browse it on port 5000!
 
 FINALLY TO CLEAN UP:
 
