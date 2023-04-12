@@ -1,6 +1,6 @@
-# tribal-tasks
+# task 2
 
-This README covers task 2, because that is the CloudFormation task. 
+This README covers task 2, the CloudFormation task. 
 
 The basic method is this:
 
@@ -36,4 +36,19 @@ FINALLY TO CLEAN UP:
 
 aws cloudformation delete-stack --stack-name tribal-task2
 
-Thanks.
+# task 3
+
+Run the build-and-test.sh script like so:
+
+./build-and-test.sh eu-west-2a python-api tribal
+
+to get a "tribal" tag, or run
+
+./build-and-test.sh eu-west-2a python-api 
+
+to get a "latest" tag. Either way the end result will be a locally running docker container [I poached the script from elsewhere, but added the health check!] that can be tested like so:
+
+andrei@area66:~/devops/cloudformation/tribal-tasks$ curl localhost:5000
+[{"id":1,"name":"Monday"},{"id":2,"name":"Tuesday"},{"id":3,"name":"Wednesday"},{"id":4,"name":"Thursday"},{"id":5,"name":"Friday"},{"id":6,"name":"Saturday"},{"id":7,"name":"Sunday"}]
+
+The pre-requisites are of course a local, VIABLE AWS-CLI config/creds set in ~/.aws.
