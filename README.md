@@ -1,4 +1,4 @@
-This README covers tasks 2 and 3, the CloudFormation task, and the ECR repo and local build tasks respectively. 
+This README covers tasks 2 and 3, the CloudFormation task, and the ECR repo / local container build tasks respectively. 
 
 # task 2
 
