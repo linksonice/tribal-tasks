@@ -18,11 +18,11 @@ aws cloudformation create-stack --stack-name tribal-task2 --template-body file:/
 
 In the above methodology, there are only a few parameters to pass to the CF - these parameters are in **bold**:
 
-- an existing key of your choice, in this case mine is called **london-key-pair**
+- an existing key pair of your choice, in this case mine is called **london-key-pair**
 - An environment variable, in this case **dev** is fine for everyone's purposes
-- an availability zone, in this case I chose **eu-west-2a** in the London, UK region
+- an availability zone, in this case I chose **eu-west-2a** in the London, UK region because it's closeby and saves time
 
-EVERYTHING ELSE is FRESH i.e. the security group, the EC2 and what it's hosting.
+EVERYTHING ELSE is FRESH i.e. the security group, and the EC2. The VPC used will be the default for your account in that region.
 
 HOW TO TEST:
 
@@ -51,6 +51,6 @@ to get a "latest" tag. Either way the end result will be a locally running docke
 andrei@area66:~/devops/cloudformation/tribal-tasks$ curl localhost:5000
 [{"id":1,"name":"Monday"},{"id":2,"name":"Tuesday"},{"id":3,"name":"Wednesday"},{"id":4,"name":"Thursday"},{"id":5,"name":"Friday"},{"id":6,"name":"Saturday"},{"id":7,"name":"Sunday"}]
 
-The OTHER end result will be a private repo in ECR by the name of python-api, with an image tag either tribal or latest depending on the tag you chose. 
+The OTHER end result will of course be a private repo in ECR by the name of python-api, with an image tag either tribal or latest depending on the tag you chose. 
 
 The pre-requisites are of course a local, VIABLE AWS-CLI config/creds set in ~/.aws.
