@@ -1,0 +1,16 @@
+{
+    "rules": [
+      {
+        "rulePriority": 1,
+        "description": "Expire untagged and count more than 4",
+        "selection": {
+          "tagStatus": "untagged",
+          "countType": "imageCountMoreThan",
+          "countNumber": 4
+        },
+        "action": {
+          "type": "expire"
+        }
+      }
+    ]
+  }
