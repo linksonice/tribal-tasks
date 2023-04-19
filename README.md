@@ -49,6 +49,7 @@ to get a "tribal" tag, or run
 to get a "latest" tag. Either way the end result will be a locally running docker container [I poached the script from elsewhere, but added the health check according to the request!] that can be tested like so:
 
 andrei@area66:~/devops/cloudformation/tribal-tasks$ curl localhost:5000
+
 [{"id":1,"name":"Monday"},{"id":2,"name":"Tuesday"},{"id":3,"name":"Wednesday"},{"id":4,"name":"Thursday"},{"id":5,"name":"Friday"},{"id":6,"name":"Saturday"},{"id":7,"name":"Sunday"}]
 
 The OTHER end result will of course be a private repo in ECR by the name of python-api, with an image tag either tribal or latest depending on what you chose. 
